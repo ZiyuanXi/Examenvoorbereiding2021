@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
     </head>
-    <header>
+    <div class="header">
         <nav>
-            <img scr="img/logo.png" alt="logo">
+            <img src="img/logo.png" alt="logo">
             <ul>
-              <li><a href="loginCustomer.php">Inloggen klanten</a></li>
-              <li><a href="loginEmployee.php">Inloggen medewerkers</a></li>
               <li><a href="#">Contactpagina</a></li>
               <li><a href="#">Registreren</a></li>
             </ul>
+              <button onclick="location.href='loginCustomer.php'">Inloggen klanten</button>
+              <button onclick="location.href='loginEmployee.php'">Inloggen medewerkers</button>
         </nav>
-    </header>
+    </div>
     <body>
       <div>
         <form action="index.php" method="post">
