@@ -1,0 +1,27 @@
+Zorg ervoor dat je een Examenvoorbereiding2021 project aanmaakt in je htdocs folder.
+Initialiseer je git in deze folder. Hierdoor kunnen we alle toekomstige projecten in deze folder uitwerken.
+
+Maak een sub-folder genaamd FlowerPower aan.
+
+Open de uitwerking van het technisch ontwerp en vertaal de Entiteit Relatie Diagram (ERD) naar een database in je PhpMyAdmin. Sla elke statement op in een bestand genaamd statements.sql.
+
+Maak een index.php bestand aan. Deze moet qua layout lijken op de voorbeelden uit het bestand uitwerking Functioneel ontwerp. Dit betekend dus dat het menu de volgende opties moet bevatten:
+- Inloggen medewerkers.
+- Contactpagina
+- Inloggen klanten
+- Registreren.
+
+De index.php pagina is je hoofdpagina. Zorg ervoor dat deze pagina de volgende elementen bevat:
+- Een foto van een duur en mooi boeket
+- Een foto van een bloemenwinkel.
+
+In je FlowerPower folder maak je de volgende bestanden aan:
+- loginEmployee.php
+- loginCustomer.php
+
+Je zorgt ervoor dat beide bestanden een login form bevatten. 
+
+BONUS: Je zou er eventueel voor kunnen kiezen om slechts 1 login form te implementeren en afhankelijk van het gekozen menu item de interface dynamisch op te zetten.
+Je maakt een contact.php pagina aan. De contactpagina-menu item moet linken naar de contact.php pagina. Deze pagina voorzie je van contact details zoals naam, adres van een winkel.
+Je maakt een database.php class aan waarin je op een correcte manier een database connection aanmaakt.
+Je zorg ervoor dat de aangemaakte pagina's op een correcte manier gelinkt zijn met de menu's. Met andere woorden: zorg dat je menu helemaal werkt!
