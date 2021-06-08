@@ -1,30 +1,44 @@
 CREATE DATABASE OverzichtJongeren;
+
 USE OverzichtJongeren;
+
+CREATE TABLE Medewerker(
+    id VARCHAR(255),
+    udername VARCHAR(255),
+    passwod VARCHAR(255)
+);
+
 CREATE TABLE Activiteit(
-    acitiviteitcode VARCHAR(3) NOT NULL PRIMARY KEY,
-    acitiviteit VARCHAR(40)
+    acitiviteit VARCHAR(255),
+    acitiviteitcode INT(3) NOT NULL PRIMARY KEY
+    
 );
+
 CREATE TABLE Instituut(
-    Instituutscode VARCHAR(5) NOT NULL PRIMARY KEY,
-    instittut VARCHAR(40),
-    Instituuttelefoon VARCHAR(11)
+    instittut VARCHAR(255),
+    Instituuttelefoon VARCHAR(255),
+    Instituutscode INT(5) NOT NULL PRIMARY KEY
 );
+
 CREATE TABLE Jongere (
-    jongerecode VARCHAR(5) NOT NULL PRIMARY KEY,
-    roepnaam VARCHAR(20) NOT NULL,
-    tussenvoegsel VARCHAR(7),
-    achternaam VARCHAR(25),
-    inschrijfdatum DATE
+    roepnaam VARCHAR(255) NOT NULL,
+    tussenvoegsel VARCHAR(255),
+    achternaam VARCHAR(255),
+    inschrijfdatum DATE,
+    jongerecode INT(5) NOT NULL PRIMARY KEY
 );
+
 CREATE TABLE Jongereactiviteit(
-    jongerecode VARCHAR(5) REFERENCES Jongere(jongerecode),
-    acitiecode VARCHAR(3) REFERENCES Activiteit(acitiviteitcode),
     startdatum DATE,
-    afgerond TINYINT(1)
+    afgerond TINYINT(1),
+    jongerecode INT(5),
+    acitiecode INT(3),
+    PRIMARY KEY (jongerecode, acitiecode)
 );
 
 CREATE TABLE Jongereinstituut (
-    jongerecode VARCHAR(5) REFERENCES Jongere(jongerecode),
-    Instituutscode VARCHAR(5) REFERENCES Instituut(Instituutscode),
-    startdatum DATE 
+    startdatum DATE ,
+    jongerecode INT(5),
+    Instituutscode INT(5),
+    PRIMARY KEY (jongerecode, Instituutscode)
 );
