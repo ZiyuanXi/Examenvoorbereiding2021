@@ -3,41 +3,44 @@ CREATE DATABASE OverzichtJongeren;
 USE OverzichtJongeren;
 
 CREATE TABLE Medewerker(
-    id VARCHAR(255),
-    udername VARCHAR(255),
-    passwod VARCHAR(255)
+    id VARCHAR(255) NOT NULL AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Activiteit(
+    acitiviteitcode INT NOT NULL AUTO_INCREMENT,
     acitiviteit VARCHAR(255),
-    acitiviteitcode INT(3) NOT NULL PRIMARY KEY
+    PRIMARY KEY (acitiviteitcode)
 );
 
 CREATE TABLE Instituut(
+    instituutscode INT NOT NULL AUTO_INCREMENT, 
     instittut VARCHAR(255),
-    Instituuttelefoon VARCHAR(255),
-    Instituutscode INT(5) NOT NULL PRIMARY KEY
+    instituuttelefoon VARCHAR(255),
+    PRIMARY KEY (instituutscode)
 );
 
 CREATE TABLE Jongere (
+    jongerecode INT NOT NULL AUTO_INCREMENT,
     roepnaam VARCHAR(255) NOT NULL,
     tussenvoegsel VARCHAR(255),
     achternaam VARCHAR(255),
     inschrijfdatum DATE,
-    jongerecode INT(5) NOT NULL PRIMARY KEY
+    PRIMARY KEY (jongerecode)
 );
 
 CREATE TABLE Jongereactiviteit(
+    jongerecode INT,
+    acitiecode INT,
     startdatum DATE,
     afgerond TINYINT(1),
-    jongerecode INT(5),
-    acitiecode INT(3),
     PRIMARY KEY (jongerecode, acitiecode)
 );
 
 CREATE TABLE Jongereinstituut (
     startdatum DATE ,
-    jongerecode INT(5),
-    Instituutscode INT(5),
+    jongerecode INT,
+    Instituutscode INT,
     PRIMARY KEY (jongerecode, Instituutscode)
 );
