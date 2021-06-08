@@ -11,7 +11,6 @@ CREATE TABLE Medewerker(
 CREATE TABLE Activiteit(
     acitiviteit VARCHAR(255),
     acitiviteitcode INT(3) NOT NULL PRIMARY KEY
-    
 );
 
 CREATE TABLE Instituut(
